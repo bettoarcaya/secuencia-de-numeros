@@ -23,5 +23,17 @@ def generarSecuencia():
         i = i + 1
 
     print secuencia
+    return secuencia
+
+def salida():
+    secuencia = generarSecuencia()
+    par = 0
+    impar = 0
+
+    for i in secuencia:
+        if ( i % 2 == 0):
+            par = par + 1
+        else:
+            impar = impar + 1 
 
 generarSecuencia()
