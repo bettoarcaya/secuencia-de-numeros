@@ -12,28 +12,22 @@ def generarSecuencia():
     secuencia = []
     secuencia.append(inicio)
     i = 0
+    par = impar = 0
+    mayor =  cnt = 0
 
     for i in range(maxIter) :
         if ( secuencia[i] == 1):
             break
         if ( secuencia[i] % 2 == 0):
+            par = par + 1
             secuencia.append(secuencia[i] / 2)
         else:
+            impar = impar + 1
             secuencia.append( ( secuencia[i] * 3 ) + 1 )
-        i = i + 1
+        
+
+            
 
     print secuencia
-    return secuencia
-
-def salida():
-    secuencia = generarSecuencia()
-    par = 0
-    impar = 0
-
-    for i in secuencia:
-        if ( i % 2 == 0):
-            par = par + 1
-        else:
-            impar = impar + 1 
 
 generarSecuencia()
